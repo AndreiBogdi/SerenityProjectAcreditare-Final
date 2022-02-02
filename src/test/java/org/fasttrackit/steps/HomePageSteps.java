@@ -8,4 +8,5 @@ public class HomePageSteps extends BaseSteps{
 
     @Step
     public void navigateToShopPage(){homePage.clickShopBtn();}
+
 }

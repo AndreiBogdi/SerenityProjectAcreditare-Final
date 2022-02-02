@@ -39,4 +39,7 @@ public class BaseTest {
 
     @Steps
     protected AddToCartSteps addToCartSteps;
+
+    @Steps
+    protected ShopSteps shopSteps;
 }

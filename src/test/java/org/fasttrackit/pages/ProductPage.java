@@ -14,6 +14,9 @@ public class ProductPage extends BasePage {
     @FindBy(id = "quantity_61fac630b64cc")
     private WebElementFacade QuantityField;
 
+    @FindBy(css = "")
+    private WebElementFacade AddToCartMessage;
+
     public int setQuantityField(int quantity){
         waitFor(QuantityField);
         withTimeoutOf(Duration.ofSeconds(10)).waitFor(QuantityField);
@@ -23,6 +26,8 @@ public class ProductPage extends BasePage {
     }
 
     public void clickAddToCartBtn(){clickOn(AddToCartBtn);}
+
+    public boolean checkAddToCartMessageDisplayed(){return AddToCartMessage.isDisplayed();}
 
 
 

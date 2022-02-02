@@ -22,5 +22,10 @@ public class HomePage extends BasePage {
 
         public void clickShopBtn(){clickOn(ShopBtn);}
 
+        @FindBy(css = "div.item:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img:nth-child(1)")
+        WebElementFacade ProductBeanie;
+
+        public void pressProductBeanie(){clickOn(ProductBeanie);}
+
 
 }

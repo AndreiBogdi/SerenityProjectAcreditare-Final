@@ -31,6 +31,8 @@ public class CartSteps extends BaseSteps {
     }
 
 
+
+
    // @Step
     //public void clickAddProductToCart(){
       //  productPage.clickAddToCartButton();

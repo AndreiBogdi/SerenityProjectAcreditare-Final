@@ -12,6 +12,8 @@ public class BaseSteps extends ScenarioSteps {
     public CartPage cartPage;
     public HomePageSteps homePageSteps;
     public AddToCartSteps addToCartSteps;
+    public ShopSteps shopSteps;
+    public ShopPage shopPage;
 
     @Step
     public void navigateToAdminHomePage(){
