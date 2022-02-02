@@ -33,13 +33,16 @@ public class LoginSteps extends BaseSteps {
     }
 
     @Step
+    public void ClickRememberMe() {myAccountPage.clickRememberMeBtn();}
+
+    @Step
     public void LoggedIn(String userName){
         Assert.assertTrue("failed",myAccountPage.checkUserLoggedIn("sasdaas"));
     }
 
     @Step
     public void checkUserLoginvalid() {
-        Assert.assertTrue("", myAccountPage.CheckLogInDisplayed());
+        Assert.assertTrue("An error message should be displayed", myAccountPage.CheckLogInDisplayed());
     }
 
 }

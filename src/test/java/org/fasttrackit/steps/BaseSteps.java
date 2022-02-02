@@ -10,6 +10,8 @@ public class BaseSteps extends ScenarioSteps {
     public HomePage homePage;
     public MyAccountPage myAccountPage;
     public CartPage cartPage;
+    public HomePageSteps homePageSteps;
+    public AddToCartSteps addToCartSteps;
 
     @Step
     public void navigateToAdminHomePage(){

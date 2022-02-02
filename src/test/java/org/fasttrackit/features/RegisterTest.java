@@ -25,9 +25,26 @@ public class RegisterTest extends BaseTest {
         registerSteps.checkUserIsRegisteredInvalidCredentials("sasdaass");
     }
 
+   // @Test
+   // public void checkRegisterInvalidCredentials(){
+  //      registerSteps.navigateToMyAccountPage();
+    //    loginSteps.LoggedIn("sasdaa");
+  //  }
     @Test
-    public void checkRegisterInvalidCredentials(){
+    public void registerWithInvalidCredentialsNoPassword(){
+        String validRegisterEmail = RandomStringUtils.randomAlphanumeric(5);
         registerSteps.navigateToMyAccountPage();
-        loginSteps.LoggedIn("sasdaa");
+        registerSteps.enterCredentials(validRegisterEmail + "@mailinator.com","");
+        registerSteps.clickRegister();
+        loginSteps.checkUserLoginvalid();
     }
+
+    @Test
+    public void registerWithoutEmailAddress(){
+        registerSteps.navigateToMyAccountPage();
+        registerSteps.enterCredentials("",RandomStringUtils.randomAlphanumeric(10));
+        registerSteps.clickRegister();
+        loginSteps.checkUserLoginvalid();
+    }
+
 }

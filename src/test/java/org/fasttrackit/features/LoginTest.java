@@ -11,7 +11,7 @@ public class LoginTest extends BaseTest{
         String validRegisterEmail = RandomStringUtils.randomAlphanumeric(5);
         loginSteps.navigateToHomePage();
         loginSteps.navigateToMyAccountPage();
-        loginSteps.enterCredentials(validRegisterEmail + "@mailinator.com",RandomStringUtils.randomAlphanumeric(10));
+        loginSteps.enterCredentials("andreinyca@yahoo.com","Serenity_123456");
         loginSteps.ClickLogIn();
         registerSteps.checkUserIsRegisteredContain(validRegisterEmail);
     }
@@ -23,6 +23,32 @@ public class LoginTest extends BaseTest{
         loginSteps.enterCredentials(validRegisterEmail + "mailinator.com",RandomStringUtils.randomAlphanumeric(10));
         loginSteps.ClickLogIn();
         loginSteps.checkUserLoginvalid();
+    }
+
+    @Test
+    public void LoginWithInvalidCredentialsNoEmail(){
+        String validRegisterEmail = RandomStringUtils.randomAlphanumeric(5);
+        loginSteps.navigateToMyAccountPage();
+        loginSteps.enterCredentials("",RandomStringUtils.randomAlphanumeric(10));
+        loginSteps.ClickLogIn();
+        loginSteps.checkUserLoginvalid();
+    }
+
+    @Test
+    public void LoginWithInvalidCredentialsNoPassword(){
+        String validRegisterEmail = RandomStringUtils.randomAlphanumeric(5);
+        loginSteps.navigateToMyAccountPage();
+        loginSteps.enterCredentials(validRegisterEmail + "mailinator.com","");
+        loginSteps.ClickLogIn();
+        loginSteps.checkUserLoginvalid();
+    }
+
+    @Test
+    public void LogInRememberMe(){
+        loginSteps.navigateToMyAccountPage();
+        loginSteps.enterCredentials("andreinyca@yahoo.com", "Serenity_123456");
+        loginSteps.ClickRememberMe();
+        loginSteps.ClickLogIn();
     }
 
 

@@ -13,9 +13,14 @@ public class HomePage extends BasePage {
         @FindBy(css = "#menu-item-64 > a:nth-child(1)")
         private WebElementFacade accountLink;
 
+        @FindBy(css = "#menu-item-66 > a:nth-child(1)")
+        private WebElementFacade ShopBtn;
+
         public void clickAccountLink() {
             clickOn(accountLink);
         }
+
+        public void clickShopBtn(){clickOn(ShopBtn);}
 
 
 }

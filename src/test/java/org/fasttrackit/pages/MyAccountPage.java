@@ -31,6 +31,9 @@ public class MyAccountPage extends BasePage {
     @FindBy(css = "#post-7 > div > div > ul")
     private WebElementFacade LoginErrorMessage;
 
+    @FindBy(css = "#rememberme")
+    private WebElementFacade RememberMeBtn;
+
 
 
     public boolean checkUserLoggedIn(String userName) {
@@ -79,4 +82,5 @@ public class MyAccountPage extends BasePage {
     public void clickLogInButton(){
         clickOn(LogInButton);
     }
+    public void clickRememberMeBtn() {clickOn(RememberMeBtn);}
 }
