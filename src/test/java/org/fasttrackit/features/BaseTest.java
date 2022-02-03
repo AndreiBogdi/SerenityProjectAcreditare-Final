@@ -3,7 +3,7 @@ package org.fasttrackit.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import org.fasttrackit.steps.CartSteps;
+import org.fasttrackit.steps.ProductPageSteps;
 import org.fasttrackit.steps.HomePageSteps;
 import org.fasttrackit.steps.LoginSteps;
 import org.fasttrackit.utils.EnvConstants;
@@ -32,14 +32,20 @@ public class BaseTest {
 
 
     @Steps
-    protected CartSteps cartSteps;
+    protected ProductPageSteps productPageSteps;
 
     @Steps
     protected HomePageSteps homepageSteps;
 
     @Steps
-    protected AddToCartSteps addToCartSteps;
+    protected CartSteps cartSteps;
 
     @Steps
     protected ShopSteps shopSteps;
+
+    @Steps
+    protected ReviewSteps reviewSteps;
+
+    @Steps
+    protected AccountPageSteps accountPageSteps;
 }

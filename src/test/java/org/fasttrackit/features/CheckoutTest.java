@@ -11,4 +11,15 @@ public class CheckoutTest extends BaseTest{
         //searchSteps.searchAndSelectProduct("SILVER DESERT NECKLACE");
       //  cartSteps.clickAddProductToCart();
     }
+
+    @Test
+    public void ReachCheckout(){
+        loginSteps.LogIn();
+        homepageSteps.navigateToShopPage();
+        shopSteps.OpenProductAlbum();
+        productPageSteps.clickAddProductToCart();
+        productPageSteps.clickViewCart();
+        cartSteps.CheckViewCartbutton();
+
+    }
 }

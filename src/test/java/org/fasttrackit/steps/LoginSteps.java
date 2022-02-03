@@ -22,6 +22,16 @@ public class LoginSteps extends BaseSteps {
     public void enterCredentials(String username, String pass){
         myAccountPage.setEmailFieldLogIn(username);
         myAccountPage.setPasswordFieldLogIn(pass);
+        ;
+
+    }
+
+    @Step
+    public void LogIn(){
+        homePage.clickAccountLink();
+        myAccountPage.setEmailFieldLogIn("andreinyca@yahoo.com");
+        myAccountPage.setPasswordFieldLogIn("Serenity_123456");
+        myAccountPage.clickLogInButton();
 
     }
     @Step

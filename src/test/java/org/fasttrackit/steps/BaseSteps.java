@@ -11,7 +11,7 @@ public class BaseSteps extends ScenarioSteps {
     public MyAccountPage myAccountPage;
     public CartPage cartPage;
     public HomePageSteps homePageSteps;
-    public AddToCartSteps addToCartSteps;
+    public CartSteps addToCartSteps;
     public ShopSteps shopSteps;
     public ShopPage shopPage;
 

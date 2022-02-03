@@ -13,6 +13,9 @@ public class ShopSteps extends BaseSteps {
     public void OpenProductBeanie(){shopPage.pressProductBeanie();}
 
     @Step
+    public void OpenProductAlbum(){shopPage.pressProductAlbum();}
+
+    @Step
     public void checkAddtoCartMessage(){
         Assert.assertTrue("expected message: Beanie has been added to your cart",productPage.checkAddToCartMessageDisplayed());
     }

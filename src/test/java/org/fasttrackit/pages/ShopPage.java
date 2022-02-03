@@ -9,4 +9,9 @@ public class ShopPage extends BasePage{
     WebElementFacade ProductBeanie;
 
     public void pressProductBeanie(){clickOn(ProductBeanie);}
+
+    @FindBy(css = "div.item:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img:nth-child(1)")
+    WebElementFacade ProductAlbum;
+
+    public void pressProductAlbum() {clickOn(ProductAlbum);}
 }

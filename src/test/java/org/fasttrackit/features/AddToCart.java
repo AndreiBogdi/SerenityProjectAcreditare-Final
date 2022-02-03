@@ -1,8 +1,5 @@
 package org.fasttrackit.features;
 
-import org.fasttrackit.steps.CartSteps;
-import org.fasttrackit.steps.HomePageSteps;
-import org.fasttrackit.steps.LoginSteps;
 import org.junit.Test;
 
 public class AddToCart extends BaseTest {
@@ -12,12 +9,11 @@ public class AddToCart extends BaseTest {
 
     @Test
     public void AddProductToCart(){
-       cartSteps.navigateToMyAccountPage();
-       loginSteps.enterCredentials("andreinyca@yahoo.com","Serenity_123456");
-       loginSteps.ClickLogIn();
+        loginSteps.LogIn();
        homepageSteps.navigateToShopPage();
        shopSteps.OpenProductBeanie();
-       cartSteps.clickAddProductToCart();
+        productPageSteps.clickAddProductToCart();
+        shopSteps.checkAddtoCartMessage();
 
 
     }
