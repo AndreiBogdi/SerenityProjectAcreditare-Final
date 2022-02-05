@@ -13,6 +13,14 @@ public class CartPage extends BasePage {
     public void PressCheckoutButton(){clickOn(CheckoutBtn);}
     public boolean CheckoutBtnDisplayed(){return CheckoutBtn.isDisplayed();}
 
+    @FindBy(css = ".restore-item")
+    private WebElementFacade undoButton;
+    public void pressUndoButton(){clickOn(undoButton);}
+
+    @FindBy(css = ".woocommerce-cart-form__cart-item")
+    private WebElementFacade productInCart;
+    public boolean checkProductInCart(){return productInCart.isDisplayed();}
+
 
 
 }

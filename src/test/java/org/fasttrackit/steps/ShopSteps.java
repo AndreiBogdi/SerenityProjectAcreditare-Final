@@ -16,8 +16,19 @@ public class ShopSteps extends BaseSteps {
     public void OpenProductAlbum(){shopPage.pressProductAlbum();}
 
     @Step
+    public void AddProductToCartandRemove(){
+        shopPage.pressAddToCart();
+        shopPage.pressCartControl();
+        shopPage.pressRemoveFromCartBtn1();
+    }
+
+    @Step
     public void checkAddtoCartMessage(){
         Assert.assertTrue("expected message: Beanie has been added to your cart",productPage.checkAddToCartMessageDisplayed());
+    }
+    @Step
+    public void productRemovedMessage(){
+        Assert.assertTrue("",shopPage.productRemovedMessage());
     }
 
 }

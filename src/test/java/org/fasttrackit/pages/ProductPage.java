@@ -9,7 +9,6 @@ import javax.swing.text.View;
 import java.time.Duration;
 
 public class ProductPage extends BasePage {
-
     @FindBy(css = ".single_add_to_cart_button")
     private WebElementFacade AddToCartBtn;
 
