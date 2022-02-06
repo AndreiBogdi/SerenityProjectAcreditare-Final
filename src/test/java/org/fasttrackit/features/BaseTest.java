@@ -48,4 +48,7 @@ public class BaseTest {
 
     @Steps
     protected AccountPageSteps accountPageSteps;
+
+    @Steps
+    protected CheckoutSteps checkoutSteps;
 }

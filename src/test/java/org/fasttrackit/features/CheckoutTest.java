@@ -22,4 +22,17 @@ public class CheckoutTest extends BaseTest{
         cartSteps.CheckViewCartbutton();
 
     }
+    @Test
+    public void Checkout(){
+        loginSteps.LogIn();
+        homepageSteps.navigateToShopPage();
+        shopSteps.OpenProductAlbum();
+        productPageSteps.clickAddProductToCart();
+        productPageSteps.clickViewCart();
+        cartSteps.PressCheckoutBtn();
+        checkoutSteps.enterBillingDetailsAndPlaceOrder("Anrei","Nica","Pini's","Strada 1","Cluj-Napoca","134500","075613412423","andreinyca@yahoo.com","Call when you arrive ");
+        checkoutSteps.CheckOrderReceivedMessage();
+
+
+    }
 }

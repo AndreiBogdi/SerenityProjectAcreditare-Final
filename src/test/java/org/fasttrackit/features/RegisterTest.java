@@ -22,7 +22,7 @@ public class RegisterTest extends BaseTest {
         registerSteps.navigateToMyAccountPage();
         registerSteps.enterCredentials("sasdaass@yahoo.com","saaxa21sda");
         registerSteps.clickRegister();
-        registerSteps.checkUserIsRegisteredInvalidCredentials("sasdaass");
+        loginSteps.checkUserLoginvalid();
     }
 
    // @Test
