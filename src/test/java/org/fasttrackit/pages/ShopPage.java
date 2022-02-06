@@ -35,5 +35,9 @@ public class ShopPage extends BasePage{
     WebElementFacade productRemoveMessage;
     public boolean productRemovedMessage(){return productRemoveMessage.isDisplayed();}
 
+    @FindBy(css = ".orderby")
+    WebElementFacade SortByBtn;
+    public boolean SortByBtnDisplayed(){return SortByBtn.isDisplayed();}
+
 
 }

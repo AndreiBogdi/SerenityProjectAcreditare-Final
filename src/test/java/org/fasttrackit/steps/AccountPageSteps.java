@@ -62,6 +62,11 @@ public class AccountPageSteps extends BaseSteps{
         Assert.assertTrue("The address that was typed should be displayed",myAccountPage.checkEnteredAddress());
     }
 
+    @Step
+    public void checkLoginButtonDisplayed(){
+        Assert.assertTrue("Login button is displayed",myAccountPage.checkLogInButton());
+    }
+
 
 
 }

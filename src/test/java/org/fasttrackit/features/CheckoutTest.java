@@ -35,4 +35,10 @@ public class CheckoutTest extends BaseTest{
 
 
     }
+
+    @Test
+    public void ReachCheckoutReturnToShop(){
+        homepageSteps.ReachCheckoutReturnToShop();
+        shopSteps.checkSortButtonDisplayed();
+    }
 }

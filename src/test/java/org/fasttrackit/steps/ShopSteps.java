@@ -31,4 +31,9 @@ public class ShopSteps extends BaseSteps {
         Assert.assertTrue("",shopPage.productRemovedMessage());
     }
 
+    @Step
+    public void checkSortButtonDisplayed(){
+        Assert.assertTrue("",shopPage.SortByBtnDisplayed());
+    }
+
 }

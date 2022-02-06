@@ -23,4 +23,5 @@ public class CheckoutSteps extends BaseSteps{
     public void CheckOrderReceivedMessage(){
         Assert.assertTrue("Order received text is displayed ",checkoutPage.checkOrderReceivedText());
     }
+
 }

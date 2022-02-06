@@ -37,11 +37,7 @@ public class ProductPageSteps extends BaseSteps {
 
 
 
-    @Step
-    public void navigateToCart() {
-      //  homePage.clickOnCartIcon();
-       // homePage.clickOnViewShoppingCartLink();
-    }
+
 
     @Step
     public void checkSubtotalPriceIsDisplayedCorrectly(){

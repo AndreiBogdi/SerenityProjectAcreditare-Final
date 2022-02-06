@@ -84,6 +84,14 @@ public class CheckoutPage extends BasePage{
     private WebElementFacade OrderReceivedText;
     public boolean checkOrderReceivedText(){return OrderReceivedText.isDisplayed();}
 
+    @FindBy(css = "#menu-item-65 > a:nth-child(1)")
+    private WebElementFacade CheckoutTabBtn;
+    public void pressCheckoutTabBtn(){clickOn(CheckoutTabBtn);}
+
+    @FindBy(css = ".button")
+    private WebElementFacade ReturnToShopBtn;
+    public void pressReturnToShopBtn(){clickOn(ReturnToShopBtn);}
+
 
 
 }

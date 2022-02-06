@@ -131,6 +131,10 @@ public class MyAccountPage extends BasePage {
     private WebElementFacade SaveAddressBtn;
     public void clickSaveAddressBtn(){clickOn(SaveAddressBtn);}
 
+    @FindBy(css = ".woocommerce-form > p:nth-child(3) > button:nth-child(3)")
+    private WebElementFacade LoginBtn;
+    public boolean checkLogInButton(){return LoginBtn.isDisplayed();}
+
 
 
 
