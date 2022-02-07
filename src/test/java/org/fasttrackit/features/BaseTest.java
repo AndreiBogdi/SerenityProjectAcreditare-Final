@@ -51,4 +51,7 @@ public class BaseTest {
 
     @Steps
     protected CheckoutSteps checkoutSteps;
+
+    @Steps
+    protected SearchSteps searchSteps;
 }

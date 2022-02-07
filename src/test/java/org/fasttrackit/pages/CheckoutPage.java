@@ -4,6 +4,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.time.Duration;
+import java.util.List;
 
 public class CheckoutPage extends BasePage{
 
@@ -91,6 +92,18 @@ public class CheckoutPage extends BasePage{
     @FindBy(css = ".button")
     private WebElementFacade ReturnToShopBtn;
     public void pressReturnToShopBtn(){clickOn(ReturnToShopBtn);}
+
+    @FindBy(css = "")
+    private List<WebElementFacade> listOfSubtotalPrices;
+
+    @FindBy(css = ".cart-subtotal > td:nth-child(2) > span:nth-child(1)")
+    private WebElementFacade subtotalText;
+
+    @FindBy(css = ".shipping > td:nth-child(2) > span:nth-child(1)")
+    private WebElementFacade shippingFeeText;
+
+    @FindBy(css = ".order-total > td:nth-child(2) > strong:nth-child(1) > span:nth-child(1)")
+    private WebElementFacade grandTotal;
 
 
 

@@ -27,5 +27,23 @@ public class HomePage extends BasePage {
 
         public void pressProductBeanie(){clickOn(ProductBeanie);}
 
+        @FindBy(css = ".search-box > i:nth-child(1)")
+        private WebElementFacade SearchIcon;
+        public void clickSearchIcon(){clickOn(SearchIcon);}
+
+        @FindBy(css = ".search-form > input:nth-child(1)")
+        private WebElementFacade SearchField;
+        public void setSearchField(String value){
+                typeInto(SearchField,value);
+        }
+
+        @FindBy(css = ".search-form > button:nth-child(2) > i:nth-child(1)")
+        private WebElementFacade SearchIcon2;
+        public void clickSearchIcon2(){clickOn(SearchIcon2);}
+
+        @FindBy(css = ".entry-title > a:nth-child(2)")
+        private WebElementFacade HoodieZipperProduct;
+        public boolean checkHoodieZipperDisplayed(){return HoodieZipperProduct.isDisplayed();}
+
 
 }
