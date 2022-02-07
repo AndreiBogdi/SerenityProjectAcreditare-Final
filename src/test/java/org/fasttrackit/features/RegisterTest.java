@@ -18,18 +18,12 @@ public class RegisterTest extends BaseTest {
 
     @Test
     public void registerWithInvalidCredentials(){
-        //registerSteps.navigateToHomePage();
         registerSteps.navigateToMyAccountPage();
         registerSteps.enterCredentials("sasdaass@yahoo.com","saaxa21sda");
         registerSteps.clickRegister();
         loginSteps.checkUserLoginvalid();
     }
 
-   // @Test
-   // public void checkRegisterInvalidCredentials(){
-  //      registerSteps.navigateToMyAccountPage();
-    //    loginSteps.LoggedIn("sasdaa");
-  //  }
     @Test
     public void registerWithInvalidCredentialsNoPassword(){
         String validRegisterEmail = RandomStringUtils.randomAlphanumeric(5);

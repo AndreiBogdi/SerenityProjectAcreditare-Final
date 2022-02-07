@@ -122,10 +122,10 @@ public class MyAccountPage extends BasePage {
         typeInto(ZIPfield,ZIP);
 
     }
-    @FindBy(id = ".u-column2 > address:nth-child(2)")
-    private WebElementFacade EnteredAddress;
+    @FindBy(id = ".entry-title")
+    private WebElementFacade AddressesTitle;
 
-    public boolean checkEnteredAddress(){return EnteredAddress.isDisplayed();}
+    public boolean checkEnteredAddress(){return AddressesTitle.isDisplayed();}
 
     @FindBy(css = "button.button")
     private WebElementFacade SaveAddressBtn;
@@ -134,16 +134,6 @@ public class MyAccountPage extends BasePage {
     @FindBy(css = ".woocommerce-form > p:nth-child(3) > button:nth-child(3)")
     private WebElementFacade LoginBtn;
     public boolean checkLogInButton(){return LoginBtn.isDisplayed();}
-
-
-
-
-
-
-
-
-
-
 
 
     public boolean checkUserLoggedIn(String userName) {
