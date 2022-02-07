@@ -167,6 +167,13 @@ public class MyAccountPage extends BasePage {
         typeInto(EmailFieldLogIn,username);
 
     }
+    @FindBy(css = "li.woocommerce-MyAccount-navigation-link:nth-child(3) > a:nth-child(1)")
+    private WebElementFacade DownloadsBtn;
+    public void clickDownloadsBtn(){clickOn(DownloadsBtn);}
+
+    @FindBy(css = ".woocommerce-Message")
+    private WebElementFacade noDownloadsMsg;
+    public boolean checkNoDownloadsMsgdisplayed(){return noDownloadsMsg.isDisplayed();}
 
 
     public void setPasswordField(String pass){

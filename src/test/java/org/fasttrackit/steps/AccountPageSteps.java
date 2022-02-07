@@ -66,6 +66,14 @@ public class AccountPageSteps extends BaseSteps{
     public void checkLoginButtonDisplayed(){
         Assert.assertTrue("Login button is displayed",myAccountPage.checkLogInButton());
     }
+    @Step
+    public void PressDownloadsBtn(){
+        myAccountPage.clickDownloadsBtn();
+    }
+    @Step
+    public void checkNoDownloadsMsg(){
+        Assert.assertFalse("When buying a digital product it should be displayed in downloads section",myAccountPage.checkNoDownloadsMsgdisplayed());
+    }
 
 
 
