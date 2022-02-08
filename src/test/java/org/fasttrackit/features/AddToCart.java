@@ -15,4 +15,17 @@ public class AddToCart extends BaseTest {
 
 
     }
+    @Test
+    public void AddToCartLogOutCheckCart(){
+        loginSteps.LogIn();
+        homepageSteps.navigateToShopPage();
+        shopSteps.OpenProductBeanie();
+        productPageSteps.clickAddProductToCart();
+        loginSteps.navigateToMyAccountPage();
+        accountPageSteps.pressLogOut();
+        loginSteps.LogIn();
+        shopSteps.PressCartControl();
+        cartSteps.CheckProductInCart();
+
+    }
 }

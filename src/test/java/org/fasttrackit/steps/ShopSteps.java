@@ -21,6 +21,10 @@ public class ShopSteps extends BaseSteps {
         shopPage.pressCartControl();
         shopPage.pressRemoveFromCartBtn1();
     }
+    @Step
+    public void PressCartControl(){
+        shopPage.pressCartControl();
+    }
 
     @Step
     public void checkAddtoCartMessage(){
